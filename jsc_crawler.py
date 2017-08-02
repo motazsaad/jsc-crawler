@@ -1,6 +1,7 @@
-import requests
+# -*- coding: utf-8 -*-
 import sys
 
+import requests
 from bs4 import BeautifulSoup
 
 print_links = set()
@@ -28,7 +29,7 @@ def crawl_links(web_url, stop=5000):
                 else:
                     target_link = my_link
                 if target_link not in crawled_links:
-                    #print('\ncrawling {}'.format(target_link))
+                    # print('\ncrawling {}'.format(target_link))
                     crawled_links.add(target_link)
                     crawl_links(target_link)
 
@@ -40,5 +41,5 @@ if __name__ == '__main__':
         print('\nerror: {}'.format(err))
     finally:
         print('\nwriting urls')
-        url_writer = open('jsc_urls.txt', mode='w')
+        url_writer = open('jsc_urls.txt', mode='w', encoding='utf-8')
         url_writer.write('\n'.join(print_links))
