@@ -10,7 +10,7 @@ jsc_news_home_url = 'http://www.aljazeera.net/news/'
 
 
 def crawl_links(web_url, stop=5000):
-    #sys.stdout.write("\rprint_links: {0}\t crawled_links: {1}".format(len(print_links), len(crawled_links)))
+    sys.stdout.write("\rprint_links: {0}\t crawled_links: {1}".format(len(print_links), len(crawled_links)))
     if len(print_links) > stop:
         return
     else:
