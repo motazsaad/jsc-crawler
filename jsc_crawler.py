@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 
 import requests
@@ -41,5 +40,5 @@ if __name__ == '__main__':
         print('\nerror: {}'.format(err))
     finally:
         print('\nwriting urls')
-        url_writer = open('jsc_urls.txt', mode='w', encoding='utf-8')
+        url_writer = open('jsc_urls.txt', mode='w')
         url_writer.write('\n'.join(print_links))
