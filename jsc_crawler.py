@@ -9,7 +9,7 @@ crawled_links = set()
 jsc_news_home_url = 'http://www.aljazeera.net/news/'
 
 # the default recursion limit is 1000. It is a guard against a stack overflow
-#sys.setrecursionlimit(1500) # doing so is dangerous.
+# sys.setrecursionlimit(1500) # doing so is dangerous.
 
 def crawl_links(web_url, stop=1000):
     sys.stdout.write("\rprint_links: {0}\t crawled_links: {1}".format(len(print_links), len(crawled_links)))
